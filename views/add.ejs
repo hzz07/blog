@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>editor</title>
+</head>
+
+<link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.css">
+<link rel="stylesheet" href="/layui/css/layui.css">
+<link rel="stylesheet" href="/stylesheets/text1.css">
+
+<body>
+<%- include('header') %>
+<%- include('nav') %>
+<div class="layui-fluid ">
+    <form method="post" action="/article/save" enctype="multipart/form-data">
+        <div class="center ">
+            <div class="layui-row">
+                <div class="layui-col-md3">
+                    <span><i class="layui-icon">&#xe612;</i>韩壮壮</span>
+                    <div id="center_1"></div>
+
+                    <span id="center_span">上传封面图片</span>
+                    <input type="file" onchange="view(this)" name="img"/>
+                </div>
+                <div class="layui-col-md9">
+                    <from class="layui-form" action="">
+                        <span>标题：</span>
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+                               class="layui-input">
+                        <div class="layui-col-md6">
+                            <span>类型：</span><br>
+                            <select name="category_id" lay-verify="required">
+                                <% for (let i = 0;i < category.length;i++){ %>
+                                <option value="<%= category[i]._id %>"><%= category[i].name %></option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="layui-col-md6">
+                            <span>原作者：</span><br>
+                            <input type="text" name="author" lay-verify="title" autocomplete="off" placeholder="请输入作者"
+                                   class="layui-input">
+                        </div>
+
+                        <div class="jinghua layui-col-md12">
+                            <span> 精华文章：</span><br>
+                            <div class="layui-input-block">
+                                <input type="radio" name="is_jing" value="1" title="是">
+                                <input type="radio" name="is_jing" value="0" title="否" checked>
+                            </div>
+                        </div>
+                    </from>
+                </div>
+                <div class="layui-col-md12">
+                    <div class="form-group">
+                        <label><b>文章正文</b> 在这里填写详细的文章内容分享给大家</label>
+                        <textarea id="content-area" style="display: none;" class="form-control" rows="3"
+                                  name="content"></textarea>
+                        <div id="content-div" style="background-color: white"></div>
+                    </div>
+                </div>
+                <div class="layui-col-md12">
+                    <!--<div class="layui-col-md6">-->
+                    <!--<button class="layui-btn layui-btn-primary">保存</button>-->
+                    <!--</div>-->
+                    <div class="layui-col-md6">
+                        <button type="submit" class="layui-btn layui-btn-danger">立刻发布</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<%- include('footer') %>
+</body>
+</html>
+<script src="/javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+<!--<script type="text/javascript" src="./../public/js/canvas-nest.min.js"></script>-->
+<!--<canvas height="926" width="1920" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"-->
+<!--id="c_n1"></canvas>-->
+<!--<script src="../public/js/canvas-ribboncanvas-ribbon.js"></script>-->
+<!--<canvas width="1920" height="917" style="position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>-->
+<script src="/javascripts/wangEditor.min.js"></script>
+<script src="/layui/layui.all.js" charset="utf-8"></script>
+<script type="text/javascript" src="/javascripts/text1.js"></script>
+
+<script src="/layui/layui.js"></script>
+<script>
+    var E = window.wangEditor;
+    var editor = new E('#content-div')
+
+    editor.customConfig.uploadImgServer = '/upload';
+    editor.customConfig.uploadFileName = 'img'
+    var $text1 = $('#content-area');
+    editor.customConfig.onchange = function (html) {
+        $text1.val(html)
+    }
+
+
+    editor.create();
+    $text1.val(editor.txt.html())
+
+
+</script>

@@ -1,0 +1,9 @@
+<header>
+    <div id="header">
+        <%if(loginUser) {%>
+        <div id="h1">
+            <p class="signature"><%=locals.loginUser.signature%></p>
+        </div>
+        <%}%>
+    </div>
+</header>

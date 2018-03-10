@@ -1,0 +1,102 @@
+/*footer*/
+
+footer {
+    margin-top: 100px;
+    background: #121212;
+    height: 245px;
+    padding: 30px 0;
+}
+.footer-l {
+}
+.footer-l-text {
+    font-size: 14px;
+    color: #a2a0a0;
+}
+.footer-l-text p {
+    margin-bottom: 15px;
+}
+.footer-l h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    height: 50px;
+    border-bottom: 1px solid #454444;
+    margin-bottom: 25px;
+    position: relative;
+}
+.footer-l h3::before {
+    background: #f4645f none repeat scroll 0 0;
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 90px;
+}
+.footer-r {
+    text-align: right;
+}
+.footer-r ul {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #454444;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+.footer-r ul li {
+    float: left;
+    margin-right: 100px;
+}
+.footer-r ul li a {
+    font-size: 16px;
+    color: #bebdbd;
+}
+.footer-r ul li a:hover {
+    color: #f46560;
+}
+.footer-r-text img {
+    float: left;
+    margin-right: 20px;
+    width: 160px;
+    height: 90px;
+}
+.footer-r-text h3 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+}
+.footer-r-text span {
+    margin-top: 30px;
+    display: inline-block;
+    color: #8d8c8c;
+    font-size: 12px;
+}
+.footer-r-copyright {
+    color: #bebdbd;
+}
+
+/*手机适配媒体查询*/
+@media only screen and ( max-width:768px ) {
+    footer {
+        height: auto;
+        margin-top: 30px;
+    }
+    .footer-l h3 {
+        font-size: 16px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .footer-r ul {
+        display: none;
+    }
+    .footer-r-text {
+        display: none;
+    }
+    .footer-r-copyright {
+        text-align: left;
+        border-top: 1px solid #454444;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+}
