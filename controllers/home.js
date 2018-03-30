@@ -21,10 +21,16 @@ const Home = {
         ArticleModel.find(where).count().then((doc) => {
             count = doc;
             totalPage = Math.ceil(count / limit);
-            ArticleModel.find(where).skip((page - 1) * limit).limit(5).sort({create_at: 'desc'}).then((doc) => {
+            ArticleModel.find(where).skip((page - 1) * limit).limit(limit).sort({create_at: 'desc'}).then((doc) => {
                 // res.json(doc)
+                let articlelist=doc;
+                for (let i=0;i<articlelist.length;i++){
+                    articlelist[i].content = articlelist[i].content.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, "").substr(0, 100) + '……';
+
+                }
+
                 res.render('index',{
-                    article:doc,
+                    article:articlelist,
                     count:count,
                     page:page,
                     totalPage:totalPage,
@@ -42,33 +48,40 @@ const Home = {
      */
     category: (req, res, next) => {
         //列表 分页 搜索 排序
-        let cateporyPath=req.params.category;
-        console.log(cateporyPath)
-        CateporyModel.findOne({path:'/'+cateporyPath}).then((doc) => {
-            let key = req.query.key;
-            let regex = new RegExp(key);
-            let count = 0;
-            let limit = 5;
-            let page = req.query.page?req.query.page:1;
-            let totalPage = 0;
-            let where = {
-                catepory_id:doc._id
-            };
-            if (key) {
-                where = {title: {$regex: regex}};
-            }
-            ArticleModel.find(where).count().then((doc) => {
+        let cateporyPath = req.params.category;
+        cateporyPath='/cg/'+cateporyPath
+        var cateporylist='';
+        let loginUser=req.session.loginUser;
+        let page=req.query.page?req.query.page:1;
+        let totalPage = 0;
+        let count=3;
+        let limit=4
+        CateporyModel.findOne({path:cateporyPath}).then(doc=>{
+            cateporylist=doc
+            let id=cateporylist._id;
+            ArticleModel.find({category_id:id}).count().then(doc=>{
                 count = doc;
                 totalPage = Math.ceil(count / limit);
-                ArticleModel.find(where).skip((page - 1) * limit).limit(5).sort({create_at: 'desc'}).then((doc) => {
-                    // res.json(doc)
-                    res.render('index',{
-                        article:doc
-                    });
+                ArticleModel.find({category_id:id}).skip((page - 1) * limit).limit(limit).sort({create_at: 'desc'}).then(doc=>{
+                    let cateporyArticle=doc;
+                    for (let i=0;i<cateporyArticle.length;i++){
+                        cateporyArticle[i].content = cateporyArticle[i].content.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, "").substr(0, 100) + '……';
 
-                })
+                    }
+                    res.render('index',{
+                        count:count,
+                        article:cateporyArticle,
+                        loginUser:loginUser,
+                        totalPage:totalPage,
+                        page:page,
+                    })
+
+
             })
-        })
+        });
+
+
+    })
     }
 }
 module.exports = Home;

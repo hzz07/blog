@@ -17,6 +17,6 @@ router.post('/upload',upload.single('img'),(req,res,next)=>{
 });
 
 //分类页
-router.get('/:category', home.category);
+router.get('/cg/:category', home.category);
 
 module.exports = router;

@@ -17,6 +17,8 @@ router.post('/save',auth, upload.single('img'), article.save);
 router.post('/update/:id',upload.single('img'), article.update);
 
 //获取文章
+router.get('/articleRead/:id',article.articleRead);
+
 router.get('/getArticle/:id',article.get)
 //删除文章
 router.post('/delete/:id', article.del);

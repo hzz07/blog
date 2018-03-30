@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情页</title>
+</head>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/text1.css">
+
+
+<body>
+<%- include('header') %>
+<%- include('nav') %>
+<!--本体-->
+<section class="container-fluid projects">
+    <div class="" id="" style="width: 70%;margin: auto">
+
+        <div class="col-sm-12 col-md-12 col-lg-12 section2">
+
+            <div class="wenzhang">
+                <h4><%= articleread1.title %></h4>
+                <p>作者：<span><%= articleread1.author %></span>·<span><%= articleread1.create_at; %></span></p>
+            </div>
+            <% if(articleread1.img) { %>
+            <img src="/uploads/<%= articleread1.img %>" alt="" width="100%">
+            <% } %>
+            <div class="wenzhang1">
+                <p>
+                    <%-articleread1.content %>
+                </p>
+            </div>
+            <hr>
+            <div class="wenzhang3">
+                <span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <span>阅读：</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</section>
+<%- include('footer') %>
+</body>
+</html>
+<script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/moment.js"></script>
+<!--<script type="text/javascript" src="/javascripts/canvas-nest.min.js"></script>-->
+<!--<canvas height="926" width="100%" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"-->
+<!--id="c_n1"></canvas>-->
+<!--<script src="/javascripts/canvas-ribboncanvas-ribbon.js"></script>-->
+<!--<canvas width="1920" height="917" style="position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>-->

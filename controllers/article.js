@@ -6,9 +6,10 @@ const Article = {
     //
     index: (req, res, next) => {
         // 搜索关键字
+        let pid=req.query.pid;
         let key = req.query.key;
         let page=req.query.page?req.query.page:1;
-        let is_jing= req.query.is_jing;
+        let is_jing= req.query.jing;
         let limit = 6;
         let regex = new RegExp(key);
         // 分页
@@ -16,6 +17,7 @@ const Article = {
         let totalpage = 0;
         let where = {};
         if (key) {
+            where.pid=pid;
             where.title= {$regex: regex};
         }
         if(is_jing){
@@ -64,6 +66,14 @@ const Article = {
     },
     // * 展示发布文章页面
     // */
+    articleRead:(req,res,next)=> {
+        let id = req.params.id;
+        ArticleModel.findOne({_id: id}).then(doc => {
+            res.render('articleread',{
+                articleread1:doc
+            })
+        })
+    },
     add: (req, res, next) => {
         CategoryModel.find({is_sys: 0}).then(doc => {
             res.render('add', {category: doc});
@@ -101,7 +111,7 @@ const Article = {
         let category_id=req.body.category_id;
         let imgData = req.body.imgdata;
         let suffix = req.body.suffix;
-        let img='';
+
 
         let base64Data = imgData.replace(/^data:image\/\w+;base64,/, "");
 
@@ -119,6 +129,7 @@ const Article = {
                     })
                 }
                 {
+                    let img='';
                     img = filename;
 
                     ArticleModel.update({_id:id}, {
@@ -148,7 +159,6 @@ const Article = {
                 author: author,
                 content: content,
                 category_id: category_id,
-                img:'',
             }).then(doc => {
                 res.json({
                     'status': 1,

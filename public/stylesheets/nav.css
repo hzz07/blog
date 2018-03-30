@@ -1,4 +1,42 @@
 
+.my-navbar {
+    padding: 20px 0;
+    background:rgba(0,0,0,0.0);
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    position: fixed;
+    padding-left: 10%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+}
+.top-nav {
+    padding: 0 15%;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.top-nav a{
+
+}
+#nav-focus>ul>li>a{
+    color: black;!important;
+}
+.my-navbar a {
+    background: transparent !important;
+}
+
+.my-navbar a:hover {
+    color: crimson !important;
+    background: transparent;
+    outline: 0
+}
+
+.my-navbar a {
+    transition: color 0.5s ease-in-out;
+}
+
+.collapse navbar-collapse {
+    width: 100%;
+!important;
+}
 /*发布按钮*/
 .Release-link {
     margin: 12px 15px 0 0;
@@ -6,7 +44,7 @@
 
 /*导航-搜索*/
 .My-search {
-    margin: 12px -15px 0 0;
+    background: transparent !important;
 }
 
 .My-search .form-group {
@@ -19,14 +57,18 @@
 
 .My-search .btn-default {
     border-radius: 0;
-    background: #de5c57;
+    background: #03c3da;
     border: none;
     color: #fff;
     padding: 7px 12px;
+    transition: all 0.3s ease-in-out 0s;
 }
-
+.Release-link{
+    float: left;
+}
 #example-navbar-collapse .Release-link a {
-    color: #fff;
+    /*color: #fff;*/
+    background: transparent !important;
 
 }
 
@@ -34,8 +76,25 @@
     color: #cb524f;
 }
 #nav-focus>li>a{
-    color: #cb524f;
+    transition: all 0.3s ease-in-out 0s;
+    color:black ;
+}
+#nav-focus>li>a:hover{
+    color: #03d522;
+
 }
 #nav-focus>li>a:focus{
-    color: grey;
+    color: #03d522;
+}
+.fabuanniu{
+    color: black;
+    background-color: #47b8e2;
+    padding: 8px 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease-out 0s;
+
+}
+.denglu{
+    background-color: #47b8e2;
+    transition: all 0.3s ease-out 0s;
 }

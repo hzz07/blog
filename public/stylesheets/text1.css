@@ -1,5 +1,3 @@
-
-
 /*页脚样式*/
 @import url(../stylesheets/footer.css);
 /*主体架构*/
@@ -10,17 +8,13 @@
 @import url(../stylesheets/login.css);
 /*选项卡*/
 @import url(../stylesheets/xuanxiangka.css);
-
 @import url(../stylesheets/publish.css);
-
 @import url(../stylesheets/list.css);
 
-
-
 #header {
-    background-image: url("/images/headerbg.jpg");
+    background-image: url("/images/2000.jpg");
     width: 100%;
-    height: 160px;
+    height: 260px;
     background-size: 100% 100%;
 }
 
@@ -28,7 +22,7 @@
     width: 50%;
     height: 10%;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 120px;
     margin: auto;
 }
 
@@ -96,334 +90,371 @@
     width: 100%;
 }
 
-
-    #denglu {
-        color: #be7775;
-        font-size: 30px;
-        margin-left: 17%;
-    }
-
-    .form-group {
-        margin-top: 20px;
-    }
-
-    .btn_submit {
-        background-color: #e05c58;
-        color: white;
-    }
-
-    .daohang {
-        margin-left: 200px;
-    }
-
-    .daohang span {
-        background-color: #e05c58;
-    }
-
-    .nav1 {
-        width: 100%;
-        background-color: white;
-        border-bottom: 2px #e7e7e7 solid;
-        position: relative;
-    }
-
-    .form1 {
-        float: right;
-        margin-right: 10%;
-        margin-top: 10px;
-    }
-
-    .serch {
-        width: 150px;
-        height: 30px;
-    }
-
-    .nav1 a {
-        color: gray;
-    }
-
-    #tuijian:focus {
-        color: #e05c58;
-    }
-
-    .navbar-collapse ul li a:hover {
-        color: #e05c58;
-    }
-
-    .form1 button {
-        background-color: #e05c58;
-        color: white;
-    }
-
-    section {
-        margin-top: -20px;
-    }
-
-    .section_1 {
-        width: 50%;
-        margin-left: 15%;
-        float: left;
-        padding: 0px;
-    }
-
-    .section_1 hr {
-        height: 3px;
-        border: none;
-        border-top: 3px solid grey;
-    }
-
-    .section2 {
-        margin-top: 2%;
-        background-color: #ffffff;
-    }
-
-    .section_2 {
-        width: 20%;
-        margin-left: 66%;
-        position: relative;
-    }
-
-    .section2_tuijian img {
-        width: 45%;
-        margin-top: 2%;
-        position: relative;
-    }
-
-    .section2_tuijian1 {
-        margin-left: 3%;
-        float: right;
-        width: 51%;
-        overflow: hidden;
-
-    }
-
-    .section2_tuijian1 p span {
-        color: #e05c58;
-    }
-
-    .section2_tuijian1 h3 {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .wenzhang3_1 span {
-        color: grey;
-        margin-bottom: 3%;
-    }
-
-    .wenzhang {
-        text-align: center;
-        width: 80%;
-        margin: auto;
-    }
-
-    .wenzhang span {
-        color: #e05c58;
-    }
-
-    .wenzhang1 {
-        margin-top: 5px;
-        line-height: 25px;
-    }
-
-    .wenzhang2 button {
-        width: 100px;
-        background-color: #e05c58;
-        color: white;
-    }
-
-    .wenzhang2_1 {
-        text-align: right;
-    }
-
-    .wenzhang2_1 button {
-        width: 100px;
-        background-color: #e05c58;
-        color: white;
-        margin-top: 5%;
-    }
-
-    .wenzhang3 {
-        float: right;
-        color: gray;
-    }
-
-    .section3 {
-        background-color: #FFFFFF;
-        margin-top: 20px;
-    }
-
-    .section3_1 {
-        width: 100%;
-    }
-
-    .section3_1 span {
-        display: block;
-        margin-top: 10px;
-        color: #e05c58;
-    }
-
-    .section_2 hr {
-        height: 3px;
-        border: none;
-        border-top: 3px solid #e05c58;
-
-    }
-
-    .section3_1 img {
-        width: 100px;
-        height: 100px;
-        margin-left: 30%;
-        border-radius: 50px 50px;
-
-    }
-
-    .section3 p {
-        font-size: 12px;
-        line-height: 50px;
-        text-align: center;
-    }
-
-    .section3_2 {
-        margin-top: 20px;
-        background-color: #ffffff;
-    }
-
-    .section3_2 a {
-        text-align: center;
-        display: block;
-        width: 57px;
-        float: left;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-
-    .jianjie {
-        clear: both;
-        text-align: center;
-        background-color: #e05c58;
-
-    }
-
-    .jianjie span {
-        color: white;
-        line-height: 25px;
-
-    }
-
-    .jingxuan {
-        margin-top: 30px;
-        background-color: #FfFfFf;
-    }
-
-    .jingxuan img {
-        width: 100%;
-    }
-
-    .jingxuan span {
-        color: gray;
-        line-height: 30px;
-    }
-
-    .jingxuan a span:hover {
-
-        color: #e05c58;
-    }
-
-    .fenye {
-        text-align: center;
-        width: 80%;
-        margin: auto;
-    }
-
-    .fenye ul li a {
-        background-color: #e05c58;
-        color: white;
-    }
-
-    /*<!--编辑css-->*/
-    .center {
-        margin: auto;
-        background-color: #ffffff;
-        width: 77%;
-        box-shadow:0px 0px 1px 0px;
-
-    }
-
-    .layui-col-md3 span i {
-        font-size: 30px;
-    }
-
-    #center_1 {
-        width: 80%;
-        height: 200px;
-        background-color: gray;
-    }
-
-    #center_1 img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .layui-col-md3 input {
-        width: 80%;
-        opacity: 0;
-        position: relative;
-        z-index: 1;
-        top: -30px;
-        line-height: 30px;
-    }
-
-    #center_span {
-        background-color: #e05c58;
-        display: block;
-        width: 80%;
-        line-height: 30px;
-        font-size: 18px;
-        color: white;
-        text-align: center;
-        margin-top: 3%;
-    }
-
-    .layui-col-md9 {
-        padding-top: 2%;
-    }
-
-    .layui-form input {
-        margin-top: 10px;
-    }
-
-    .layui-col-md6 {
-        margin-top: 2%;
-    }
-
-    .layui-form span {
-        margin-top: 2%;
-    }
-
-    .jinghua {
-        margin-top: 2%;
-    }
-
-    #editor {
-        background-color: white;
-        margin-top: 2%;
-    }
-
-    .layui-col-md12 span {
-        margin-left: 2%;
-    }
-
-    .layui-col-md6 .layui-btn-danger {
-        margin-left: 1%;
-        width: 40%;
-    }
-
-    .layui-col-md6 .layui-btn-primary {
-        float: right;
-        background-color: #e05c58;
-        width: 40%;
-        margin-right: 1%;
-    }
-
+#denglu {
+    color: #be7775;
+    font-size: 30px;
+    margin-left: 17%;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.btn_submit {
+    background-color: #e05c58;
+    color: white;
+}
+
+.daohang {
+    margin-left: 200px;
+}
+
+.daohang span {
+    /*background-color: #03c3da;*/
+}
+
+
+.form1 {
+    float: right;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+
+.serch {
+    width: 150px;
+    height: 30px;
+}
+
+.nav1 a {
+    color: gray;
+}
+
+#tuijian:focus {
+    color: #e05c58;
+}
+
+.navbar-collapse ul li a:hover {
+    color: #e05c58;
+}
+
+.form1 button {
+    background-color: #e05c58;
+    color: white;
+}
+
+section {
+    margin-top: -20px;
+}
+
+.section_1 {
+    width: 50%;
+    margin-left: 15%;
+    float: left;
+    padding: 0px;
+}
+
+.section_1 hr {
+    height: 3px;
+    border: none;
+    border-top: 3px solid grey;
+}
+
+.section2 {
+    margin-top: 2%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+}
+
+.section_2 {
+    width: 20%;
+    margin-left: 66%;
+    position: relative;
+}
+
+.section2_tuijian img {
+    width: 45%;
+    margin-top: 2%;
+    position: relative;
+}
+
+.section2_tuijian1 {
+    margin-left: 3%;
+    float: right;
+    width: 51%;
+    overflow: hidden;
+
+}
+
+.section2_tuijian1 p span {
+    color: #e05c58;
+}
+
+.section2_tuijian1 h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wenzhang3_1 span {
+    color: grey;
+    float: right;
+}
+
+.wenzhang {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.wenzhang span {
+    color: #e05c58;
+}
+
+.wenzhang1 {
+    margin-top: 5px;
+    line-height: 25px;
+}
+
+.wenzhang2 button {
+    width: 100px;
+    background-color: #e05c58;
+    color: white;
+}
+
+.wenzhang2_1 {
+    text-align: right;
+}
+
+.wenzhang2_1 button {
+    width: 100px;
+    background-color: #e05c58;
+    color: white;
+    margin-top: 5%;
+}
+
+.wenzhang3 {
+    float: right;
+    color: gray;
+}
+
+.section3 {
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+
+}
+
+.section3_1 {
+    width: 100%;
+}
+
+.section3_1 span {
+    display: block;
+    margin-top: 10px;
+    color: #e05c58;
+}
+
+.section_2 hr {
+    height: 3px;
+    border: none;
+    border-top: 3px solid #025bac;
+
+}
+
+.section3_1 img {
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    border-radius: 50px 50px;
+
+}
+
+.section3 p {
+    font-size: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.section3_2 {
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+}
+
+.section3_2 a {
+    text-align: center;
+    display: block;
+    width: 57px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+
+
+}
+
+.jianjie {
+    clear: both;
+    text-align: center;
+    background-color: #03c3da;
+
+}
+
+.jianjie span {
+    color: white;
+    line-height: 25px;
+
+}
+
+.jingxuan {
+    margin-top: 30px;
+    background-color: #FfFfFf;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+
+}
+.jingxuan a {
+
+    color: #e05c58;
+}
+.jingxuan a span:hover {
+
+    color: #e05c58;
+}
+.jingxuan1{
+    display: block;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+
+}
+
+.jingxuan1 img {
+    width: 100%;
+}
+
+.jingxuan1 span {
+    color: gray;
+    line-height: 30px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.jingxuan1 a span:hover {
+
+    color: #e05c58;
+}
+.jingxuan3 span{
+    text-align: right;
+    margin-left:0;
+    float: left;
+
+}
+.jingxuan3 .fs11{
+    float: right;
+}
+.fenye {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.fenye ul li a {
+    color: grey;
+}
+
+/*<!--编辑css-->*/
+.center {
+    margin: auto;
+    background-color: #ffffff;
+    width: 77%;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+
+
+}
+
+.layui-col-md3 span i {
+    font-size: 30px;
+}
+
+#center_1 {
+    width: 80%;
+    height: 200px;
+    background-color: gray;
+}
+
+#center_1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.layui-col-md3 input {
+    width: 80%;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    top: -30px;
+    line-height: 30px;
+}
+
+#center_span {
+    background-color: #e05c58;
+    display: block;
+    width: 80%;
+    line-height: 30px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.layui-col-md9 {
+    padding-top: 2%;
+}
+
+.layui-form input {
+    margin-top: 10px;
+}
+.addfabu{
+    text-align: center;
+}
+.layui-col-md6 {
+    margin-top: 2%;
+}
+
+.layui-form span {
+    margin-top: 2%;
+}
+
+.jinghua {
+    margin-top: 2%;
+}
+
+#editor {
+    background-color: white;
+    margin-top: 2%;
+}
+
+.layui-col-md12 span {
+    margin-left: 2%;
+}
+
+.layui-col-md6 .layui-btn-danger {
+    margin-left: 1%;
+    width: 40%;
+}
+
+.layui-col-md6 .layui-btn-primary {
+    float: right;
+    background-color: #e05c58;
+    width: 40%;
+    margin-right: 1%;
+}
+
+#content-div {
+    background-color: white;
+    z-index: 1;
+    position: relative;
+}
+.my_neirong{
+    margin-top: 3%;
+}

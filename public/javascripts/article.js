@@ -2,13 +2,25 @@ $(function () {
     getArticleList()
 
 })
+var key = '';
+var jing='';
+function jingxuan() {
+    if(jing==''){
+        jing=1;
+    }
+    else{
+        jing='';
+    }
+    getArticleList();
+
+}
 var is_jing='';
 var page = 1;
-var key = '';
+
 
 /*获取分类列表*/
 function getArticleList() {
-    $.get('/article/article',{page:page,key:key},function (data) {
+    $.get('/article/article',{page:page,key:key,jing:jing},function (data) {
         if (data.status == 1) {
 
             var list = data.result;

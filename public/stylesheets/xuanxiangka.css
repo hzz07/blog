@@ -117,17 +117,17 @@
     color:black;
 }
 .tab .nav-tabs li.active a, .tab .nav-tabs li a:hover {
-    color: #de5c57;
+    color: #025bac;
     border: 0;
     border-radius: 0;
     background: #fff;
-    border-left: 4px solid #de5c57;
+    border-left: 4px solid #025bac;
 }
 .tab .nav-tabs li.active a:after, .tab .nav-tabs li a:hover:after {
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
-    border-left: 8px solid #de5c57;
+    border-left: 8px solid #025bac;
     border-bottom: 5px solid transparent;
     position: absolute;
     left: 0;
@@ -168,7 +168,7 @@
 }
 .manage-search input {
     background: #fff none repeat scroll 0 0;
-    border: 2px solid #de5c57;
+    border: 2px solid #025bac;
     border-radius: 5px;
     color: #9e9c9c;
     height: 42px;
@@ -177,7 +177,7 @@
     width: 100%;
 }
 .manage-search button {
-    background: #de5c57 none repeat scroll 0 0;
+    background: #025bac none repeat scroll 0 0;
     border: medium none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
@@ -288,6 +288,9 @@
 .manage-list-box1 {
     padding-bottom: 10px;
     border-bottom: 1px solid #dedcdc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .manage-list-box1 img{
     width: 100%;
@@ -363,8 +366,9 @@
     font-size: 16px;
 }
 .tab-title a {
+    transition: all 0.3s ease-out 0s;
     padding: 12px 35px;
-    background: #de5c57;
+    background: #47b8e2;
     color: #fff;
     display: inline-block;
     margin-top: 15px;

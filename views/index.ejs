@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>home</title>
+    <title>主页</title>
 </head>
 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -10,8 +10,9 @@
 
 
 <body>
-<%- include('header') %>
 <%- include('nav') %>
+<%- include('header') %>
+
 <!--本体-->
 <section class="container-fluid projects">
     <div class="section_1" id="section_1">
@@ -27,11 +28,11 @@
             <% } %>
             <div class="wenzhang1">
                 <p>
-                    <%-list.content %>
+                    <%- list.content %>
                 </p>
             </div>
             <div class="wenzhang2">
-                <button type="button" class="btn btn-default">阅读文章</button>
+                <a href="/article/articleRead/<%=list._id%>" type="button" class="btn btn-default">阅读文章</a>
             </div>
             <hr>
             <div class="wenzhang3">
@@ -49,7 +50,7 @@
                 <ul class="pagination">
                     <% if(page > 1) { %>
                     <li>
-                        <a href="/?page=<%= parseInt(page) - 1 %>" aria-label="Previous">
+                        <a href="?page=<%= parseInt(page) - 1 %>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
@@ -60,7 +61,7 @@
                     </li>
                     <% if(totalPage > page){ %>
                     <li>
-                        <a href="/?page=<%= parseInt(page) + 1 %>" aria-label="Next">
+                        <a href="?page=<%= parseInt(page) + 1 %>" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </li>
@@ -74,21 +75,21 @@
 
     <div class="section_2">
         <div class="col-sm-12 col-md-12 col-lg-12 section3">
-        <%if(loginUser) {%>
+            <% if(loginUser) { %>
             <div class="section3_1">
                 <hr>
                 <span>楼主简介</span>
-                <a href="/users/personal"><img src="/uploads/<%=locals.loginUser.avatar%>" alt=""></a>
+                <a href="/users/personal"><img src="/uploads/<%= locals.loginUser.avatar %>" alt=""></a>
             </div>
             <div class="jianjie">
-                <span id="username"><%=locals.loginUser.nickname%></span><br>
-                <span id="position"><%=locals.loginUser.position%></span><br>
-                <span id="other"><%=locals.loginUser.other%></span>
+                <span id="username"><%= locals.loginUser.nickname %></span><br>
+                <span id="position"><%= locals.loginUser.position %></span><br>
+                <span id="other"><%= locals.loginUser.other %></span>
             </div>
             <div class="section3">
-                <p class="signature"><%=locals.loginUser.signature%></p>
+                <p class="signature"><%= locals.loginUser.signature %></p>
             </div>
-            <%}%>
+            <% } %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 section3_2">
             <span>个人标签</span><br>
@@ -101,25 +102,25 @@
         <div class="col-sm-12 col-md-12 col-lg-12 jingxuan">
             <hr>
             <span>精选文章</span>
-            <a href=""><img src="/images/5431586.jpg" alt=""></a>
-            <div class="jingxuan">
-                <a href=""><span>越努力越幸运-字体效果设计</span></a> <br>
-                <span>2018-01-12</span>
-                <div class="wenzhang3">
-                    <span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span>
-                    <span>阅读：2222</span>
-                </div>
-            </div>
-            <a href=""><img src="/images/3215648965.jpg" alt=""></a>
+            <% for(var i = 0;i < article.length;i++){var list1 = article[i]; %>
+            <% if(list1.is_jing ==1) { %>
 
-            <div class="jingxuan">
-                <a href=""><span>26个英文字母设计-C4作品</span></a><br>
-                <span>2018-01-08</span>
-                <div class="wenzhang3">
-                    <span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span>
-                    <span>阅读：2321</span>
+
+            <div class="jingxuan1">
+                <a href=""><img src="/uploads/<%= list1.img %>" alt=""></a>
+                <a href=""><span><%= list1.title %></span></a> <br>
+                <div class="jingxuan3">
+                    <span><%= list1.create_at %></span>
+                    <span class="fs11">阅读：2222</span>
+                    <span class="glyphicon glyphicon glyphicon-heart fs11" aria-hidden="true"></span>
+
+
                 </div>
+
             </div>
+
+            <% } %>
+            <% } %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 jingxuan">
             <hr>
@@ -167,5 +168,8 @@
 <!--<script type="text/javascript" src="/javascripts/canvas-nest.min.js"></script>-->
 <!--<canvas height="926" width="100%" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"-->
 <!--id="c_n1"></canvas>-->
-<!--<script src="/javascripts/canvas-ribboncanvas-ribbon.js"></script>-->
-<!--<canvas width="1920" height="917" style="position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>-->
+<script src="/javascripts/canvas-ribboncanvas-ribbon.js"></script>
+<canvas width="1920" height="917" style="position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>
+<script src="/javascripts/text1.js">
+
+</script>

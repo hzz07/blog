@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default nav1" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top my-navbar" role="navigation">
     <div class="container">
         <div class=" daohang">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -34,25 +34,30 @@
                 <!--<li><a href="#">个人中心</a></li>-->
             </ul>
             <!-- 搜索 -->
-            <div class="Release-link navbar-right">
-                <% if(locals.loginUser) { %>
-                <a href="/users/logout" class="btn btn-default btn-danger">登出</a>
-                <% }else{ %>
-                <a href="/users/login" class="btn btn-default btn-danger"> 登录</a>
-                <% } %>
-            </div>
-            <form class="navbar-form navbar-right My-search" action="/" method="get">
+            <div class="navbar-right" >
+                <div class="Release-link">
+                    <% if(locals.loginUser) { %>
 
-                <input class="form-control" placeholder="填写查询内容" type="text" name="key">
-                <button type="submit" class="btn btn-default">搜索</button>
-            </form>
-            <!-- 发布按钮 -->
-            <div class="Release-link navbar-right">
-                <a href="/article/add" class="btn btn-default btn-danger"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 发布文章</a>
+                    <a href="/users/logout" class="btn btn-default denglu">登出</a>
+                    <% }else{ %>
+                    <a href="/users/login" class="btn btn-default denglu"> 登录</a>
+                    <% } %>
+                </div>
+                <form class="navbar-form navbar-right My-search Release-link" action="/" method="get">
+
+                    <input class="form-control" placeholder="填写查询内容" type="text" name="key">
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+                <!-- 发布按钮 -->
+                <div class="Release-link navbar-right">
+                    <a href="/article/add" class="btn btn-default fabuanniu"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 发布文章</a>
+                </div>
             </div>
+
         </div>
 
     </div>
 </nav>
 <!--导航开始 -->
 <!--导航结束 -->
+

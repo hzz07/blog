@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>我的博客文章列表1</title>
+    <title>个人中心页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!--width=device-width, initial-scale=1适当的绘制和触屏缩放;user-scalable=no禁用缩放-->
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -67,6 +67,9 @@
 <script src="/javascripts/category.js"></script>
 <script src="/javascripts/article.js"></script>
 <script src="/javascripts/wangEditor.min.js"></script>
+<script src="/javascripts/canvas-ribboncanvas-ribbon.js"></script>
+<canvas width="1920" height="917" style="position: fixed; top: 0px; left: 0px; z-index: -1;"></canvas>
+<script src="/javascripts/text1.js"></script>
 <script type="text/javascript">
     var E = window.wangEditor;
     var editor = new E('#content-div')
@@ -170,12 +173,12 @@
             imgdata:imgdata,
             suffix:suffix,
         }, function (data) {
-            if (data.status == 1) {
-                layer.msg(data.msg);
-            } else {
-                layer.msg(data.msg);
-            }
-        });
+                if (data.status == 1) {
+                    layer.msg(data.msg);
+                } else {
+                    layer.msg(data.msg);
+                }
+            });
     }
 
 </script>

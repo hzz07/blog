@@ -30,7 +30,7 @@
                                class="layui-input">
                         <div class="layui-col-md6">
                             <span>类型：</span><br>
-                            <select name="category_id" lay-verify="required">
+                            <select name="category_id" lay-verify="required" class="addSelect">
                                 <% for (let i = 0;i < category.length;i++){ %>
                                 <option value="<%= category[i]._id %>"><%= category[i].name %></option>
                                 <% } %>
@@ -57,14 +57,14 @@
                         <label><b>文章正文</b> 在这里填写详细的文章内容分享给大家</label>
                         <textarea id="content-area" style="display: none;" class="form-control" rows="3"
                                   name="content"></textarea>
-                        <div id="content-div" style="background-color: white"></div>
+                        <div id="content-div"></div>
                     </div>
                 </div>
-                <div class="layui-col-md12">
+                <div class="layui-col-md12 addfabu">
                     <!--<div class="layui-col-md6">-->
                     <!--<button class="layui-btn layui-btn-primary">保存</button>-->
                     <!--</div>-->
-                    <div class="layui-col-md6">
+                    <div class="layui-col-md12">
                         <button type="submit" class="layui-btn layui-btn-danger">立刻发布</button>
                     </div>
                 </div>
