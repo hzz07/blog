@@ -85,6 +85,12 @@ function saveCategory() {
     var path = $("#path").val();
     var sort = $("#sort").val();
     var pid = $("#pid").val();
+    if(path.indexOf('/user/')==-1){
+        path='/user/'+path
+    }
+    if(!pid){
+        pid = '53ca42f418bfb23c1e04df02'
+    }
     var template = $("#template").val();
     var is_nav = $("#is_nav").val();
     if (id) {

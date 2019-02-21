@@ -59,7 +59,6 @@ const Category = {
         let template = req.body.template;
         let is_nav = req.body.is_nav;
         let pid = req.body.pid;
-
         // let name = '测试';
         // let path = '/text'
         // let sort = 100;
